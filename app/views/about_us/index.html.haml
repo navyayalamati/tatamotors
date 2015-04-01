@@ -1,0 +1,25 @@
+%h1 Listing about_us
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Content
+      %th Heading
+      %th Image
+      %th
+      %th
+      %th
+
+  %tbody
+    - @about_us.each do |about_us|
+      %tr
+        %td= about_us.content
+        %td= about_us.heading
+        %td= about_us.image
+        %td= link_to 'Show', about_us
+        %td= link_to 'Edit', edit_about_u_path(about_us)
+        %td= link_to 'Destroy', about_us, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New About u', new_about_u_path

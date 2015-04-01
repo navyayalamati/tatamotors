@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @about_u.content
+%p
+  %b Heading:
+  = @about_u.heading
+%p
+  %b Image:
+  = @about_u.image
+
+= link_to 'Edit', edit_about_u_path(@about_u)
+\|
+= link_to 'Back', about_us_path

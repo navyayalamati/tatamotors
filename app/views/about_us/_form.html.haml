@@ -1,0 +1,19 @@
+= form_for @about_u do |f|
+  - if @about_u.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@about_u.errors.count, "error")} prohibited this about_u from being saved:"
+      %ul
+        - @about_u.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :content
+    = f.text_area :content ,as: :wysihtml5, :class => 'form-control wysiHtml5textarea'
+  .field
+    = f.label :heading
+    = f.text_field :heading
+  .field
+    = f.label :image
+    = f.text_field :image
+  .actions
+    = f.submit 'Save'

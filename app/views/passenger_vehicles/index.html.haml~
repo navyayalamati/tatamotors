@@ -1,0 +1,25 @@
+%h1 Listing passenger_vehicles
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Introduction
+      %th Image
+      %th
+      %th
+      %th
+
+  %tbody
+    - @passenger_vehicles.each do |passenger_vehicle|
+      %tr
+        %td= passenger_vehicle.name
+        %td= passenger_vehicle.introduction
+        %td= passenger_vehicle.image
+        %td= link_to 'Show', passenger_vehicle
+        %td= link_to 'Edit', edit_passenger_vehicle_path(passenger_vehicle)
+        %td= link_to 'Destroy', passenger_vehicle, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Passenger vehicle', new_passenger_vehicle_path

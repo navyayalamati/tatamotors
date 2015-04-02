@@ -1,0 +1,15 @@
+.row{:ng_controller => "FeatureController"}
+  = link_to "Add Feature" , "#" , :ng_click  => "newFeature()" , :class => "btn btn-primary"
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th{:width => "50%"} Feature
+        %th Feature Type
+        %th 
+      %tr{:ng_show => "new_specification"}
+        %th
+          %input{:type => "text", :ng_model => "new_specification.spec_label", :class => "form-control", :placeholder => "Specification"}
+        %th
+          %input{:type => "text", :ng_model => "new_specification.spec_value", :class => "form-control", :placeholder => "Specification Value"}
+        %th
+          = link_to "Save", "#", :ng_click => "saveFeature(new_specification)", :class => "btn btn-primary btn-sm"

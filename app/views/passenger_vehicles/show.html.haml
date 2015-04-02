@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @passenger_vehicle.name
+%p
+  %b Introduction:
+  = @passenger_vehicle.introduction
+%p
+  %b Image:
+  = @passenger_vehicle.image
+
+= link_to 'Edit', edit_passenger_vehicle_path(@passenger_vehicle)
+\|
+= link_to 'Back', passenger_vehicles_path

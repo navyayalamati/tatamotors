@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  resources :features
+
+  resources :passenger_vehicles do
+    resources :features
+    collection do
+      get 'description'
+      get 'features'
+    end
+  end
+
   resources :about_us
 
   get 'home/index'

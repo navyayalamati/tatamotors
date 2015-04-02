@@ -1,0 +1,22 @@
+= form_for @passenger_vehicle , :html => {:class => "form-horizontal" , :role => "form"} do |f|
+  .row
+    .col-md-2.col-xs-12
+      = f.label :name
+    .col-md-6.col-xs-12
+      = f.text_field :name
+  %br
+  .row
+    .col-md-2.col-xs-12
+      = f.label :introduction
+    .col-md-6.col-xs-12
+      = f.text_field :introduction
+  %br
+  .row
+    .col-md-2.col-xs-12
+      = f.label :image
+    .col-md-6.col-xs-12
+      = f.file_field :image
+  %br
+  .row
+    %center
+      = button_tag "Save", :type => "submit", :class => 'btn btn-primary'

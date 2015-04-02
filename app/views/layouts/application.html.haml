@@ -1,7 +1,7 @@
 !!!
-%html
+%html{"ng-app" => 'myApp'}
   %head
-    %title DetroitTatamotors
+    %title Detroit-Tatamotors
     
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
@@ -10,4 +10,10 @@
     .row
       = render '/shared/banner'
     .row
-      = yield
+      - if controller_name == 'passenger_vehicles'
+        %br
+        .container
+          = render '/shared/menu'
+          = yield
+      - else 
+        = yield

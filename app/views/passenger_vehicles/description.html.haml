@@ -1,0 +1,13 @@
+- @passenger_vehicles.each do |passenger_vehicle|
+  .row
+    .col-md-12.col-xs-12
+      %center
+        = image_tag passenger_vehicle.image, :size => '200',:class => 'img-thumbnail img-responsive', :width => "100%"
+  .row
+    &nbsp &nbsp &nbsp &nbsp 
+    = passenger_vehicle.introduction
+  .row
+    .pull-right
+      = link_to 'Edit', edit_passenger_vehicle_path(passenger_vehicle), :class => "btn btn-primary"
+  
+

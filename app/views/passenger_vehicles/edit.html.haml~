@@ -1,0 +1,7 @@
+%h1 Editing passenger_vehicle
+
+= render 'form'
+
+= link_to 'Show', @passenger_vehicle
+\|
+= link_to 'Back', passenger_vehicles_path

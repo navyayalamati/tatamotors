@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Passenger vehicle:
+  = @feature.passenger_vehicle_id
+%p
+  %b Feature type:
+  = @feature.feature_type
+%p
+  %b Feature:
+  = @feature.feature
+
+= link_to 'Edit', edit_feature_path(@feature)
+\|
+= link_to 'Back', features_path

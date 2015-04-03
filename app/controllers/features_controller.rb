@@ -12,12 +12,12 @@ class FeaturesController < ApplicationController
       end
     end
   end
-
+  
   # GET /features/1
   # GET /features/1.json
   def show
   end
-
+  
   # GET /features/new
   def new
     @feature = Feature.new

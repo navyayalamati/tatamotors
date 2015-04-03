@@ -1,25 +1,42 @@
-%h1 Listing features
-
-%table
-  %thead
-    %tr
-      %th Passenger vehicle
-      %th Feature type
-      %th Feature
-      %th
-      %th
-      %th
-
-  %tbody
-    - @features.each do |feature|
+.row{:ng_controller => "FeatureController", :ng_init => "getSpecifications(1)"}
+  = link_to "Add Feature" , "#" , :ng_click  => "newFeature()" , :class => "btn btn-primary"
+  %table.table.table-bordered
+    %thead
       %tr
-        %td= feature.passenger_vehicle_id
-        %td= feature.feature_type
-        %td= feature.feature
-        %td= link_to 'Show', feature
-        %td= link_to 'Edit', edit_feature_path(feature)
-        %td= link_to 'Destroy', feature, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th{:width => "50%"} Feature
+        %th Feature Type
+        %th 
+      %tr{:ng_show => "new_specification"}
+        %th
+          %input{:type => "text", :ng_model => "new_specification.feature_type", :class => "form-control", :placeholder => "Specification"}
+        %th
+          %input{:type => "text", :ng_model => "new_specification.feature", :class => "form-control", :placeholder => "Specification Value"}
+        %th
+          = link_to "Save", "#", :ng_click => "saveFeature(new_specification)", :class => "btn btn-primary btn-sm"
 
-%br
 
-= link_to 'New Feature', new_feature_path
+-# %h1 Listing features
+
+-# %table
+-#   %thead
+-#     %tr
+-#       %th Passenger vehicle
+-#       %th Feature type
+-#       %th Feature
+-#       %th
+-#       %th
+-#       %th
+
+-#   %tbody
+-#     - @features.each do |feature|
+-#       %tr
+-#         %td= feature.passenger_vehicle_id
+-#         %td= feature.feature_type
+-#         %td= feature.feature
+-#         %td= link_to 'Show', feature
+-#         %td= link_to 'Edit', edit_feature_path(feature)
+-#         %td= link_to 'Destroy', feature, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+-# %br
+
+-# = link_to 'New Feature', new_feature_path

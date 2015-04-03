@@ -4,7 +4,7 @@
         var ProductFeature = $resource('/passenger_vehicle/:passener_vehicle_id/features/:id.json', {id:'@id', passenger_vehicle: '@passenger_vehicle_id'},
 				       {
 					   "update": { method: "PUT"},
-					   "saveFeature":{url: "/passenger_vehicle/:passener_vehicle_id/features/saveFeature.json", method: "POST"}
+					   "saveFeature":{url: "/features/create", method: "POST"}
 					   
 				       });
         return {

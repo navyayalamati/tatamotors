@@ -11,6 +11,14 @@
       = render '/shared/banner'
     .row
       - if controller_name == 'passenger_vehicles'
+        .row
+          - PassengerVehicle.all.each do |passenger_vehicle|
+            .row
+              .col-md-2.col-xs-12
+                %center
+                  = link_to "#{passenger_vehicle.name}", passenger_vehicle_path(passenger_vehicle), :class => "btn btn-primary"
+                  -# %a.btn.btn-primary{href: '/passenger_vehicles/"#{passenger_vehicle.id}"'}= passenger_vehicle.name
+                    
         %br
         .container
           = render '/shared/menu'

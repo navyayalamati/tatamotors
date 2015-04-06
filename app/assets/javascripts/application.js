@@ -4,6 +4,8 @@
 //= require angular
 //= require angular-resource
 //= require bootstrap
+//= require underscore
+//= require gmaps/google
 //= require bootstrap-wysihtml5
 //= require_tree .
 $(document).ready(function () {

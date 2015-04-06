@@ -49,3 +49,7 @@ gem 'will_paginate', '~> 3.0.7'
 gem 'angularjs-rails', '1.3.14'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '~> 4.1.1'
+gem "geocoder"
+gem 'gmaps4rails', '~> 2.1.2'
+gem 'gon', '~> 5.2.0'  
+gem 'underscore-rails'

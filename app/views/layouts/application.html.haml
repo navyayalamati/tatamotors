@@ -2,7 +2,7 @@
 %html{"ng-app" => 'myApp'}
   %head
     %title Detroit-Tatamotors
-    
+    = include_gon(:init => true) 
     = stylesheet_link_tag    'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -20,8 +20,9 @@
                   -# %a.btn.btn-primary{href: '/passenger_vehicles/"#{passenger_vehicle.id}"'}= passenger_vehicle.name
                     
         %br
-        .container
+        .container12
           = render '/shared/menu'
           = yield
       - else 
-        = yield
+        .container
+          = yield

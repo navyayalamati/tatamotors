@@ -1,11 +1,5 @@
 .row
   = form_for @about_u do |f|
-    - if @about_u.errors.any?
-      #error_explanation
-        %h2= "#{pluralize(@about_u.errors.count, "error")} prohibited this about_u from being saved:"
-        %ul
-          - @about_u.errors.full_messages.each do |msg|
-            %li= msg
     .row
       .col-md-2.col-xs-12
         = f.label :content

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :dealer_locations
+
   resources :features
 
   resources :passenger_vehicles do

@@ -1,0 +1,31 @@
+= form_for @dealer_location do |f|
+  - if @dealer_location.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@dealer_location.errors.count, "error")} prohibited this dealer_location from being saved:"
+      %ul
+        - @dealer_location.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :country
+    = f.text_field :country
+  .field
+    = f.label :name_of_setup
+    = f.text_field :name_of_setup
+  .field
+    = f.label :city
+    = f.text_field :city
+  .field
+    = f.label :tel_no
+    = f.text_field :tel_no
+  .field
+    = f.label :category
+    = f.text_field :category
+  .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longitude
+    = f.text_field :longitude
+  .actions
+    = f.submit 'Save'

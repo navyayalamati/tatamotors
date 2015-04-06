@@ -1,0 +1,35 @@
+.row
+  .col-sm-6
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th Country
+          %th Name of setup
+          %th City
+          %th Tel no
+          %th Category
+          %th Latitude
+          %th Longitude
+          %th
+          %th
+          %th
+
+      %tbody
+        - @dealer_locations.each do |dealer_location|
+          %tr
+            %td= dealer_location.country
+            %td= dealer_location.name_of_setup
+            %td= dealer_location.city
+            %td= dealer_location.tel_no
+            %td= dealer_location.category
+            %td= dealer_location.latitude
+            %td= dealer_location.longitude
+            %td= link_to 'Show', dealer_location
+            %td= link_to 'Edit', edit_dealer_location_path(dealer_location)
+            %td= link_to 'Destroy', dealer_location, :method => :delete, :data => { :confirm => 'Are you sure?' }
+  .col-sm-6
+    = render 'shared/map'
+
+%br
+
+//= link_to 'New Dealer location', new_dealer_location_path

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Country:
+  = @dealer_location.country
+%p
+  %b Name of setup:
+  = @dealer_location.name_of_setup
+%p
+  %b City:
+  = @dealer_location.city
+%p
+  %b Tel no:
+  = @dealer_location.tel_no
+%p
+  %b Category:
+  = @dealer_location.category
+%p
+  %b Latitude:
+  = @dealer_location.latitude
+%p
+  %b Longitude:
+  = @dealer_location.longitude
+
+= link_to 'Edit', edit_dealer_location_path(@dealer_location)
+\|
+= link_to 'Back', dealer_locations_path

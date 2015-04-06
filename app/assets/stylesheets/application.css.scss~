@@ -1,10 +1,11 @@
 // = require_self
 // = require jquery-ui
+//= require bootstrap-wysihtml5
 // = require_tree .
 
-
+@import bootstrap_var_override;
 @import 'font-awesome';
 @import 'bootstrap';
-//@import 'jimgMenu';
-@import 'reset';
-@import 'style';
+@import 'jimgMenu';
+//@import 'reset';
+//@import 'style';

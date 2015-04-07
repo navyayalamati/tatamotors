@@ -11,18 +11,12 @@ class DealerLocationsController < ApplicationController
     gmap_data = Gmaps4rails.build_markers(@dealer_locations) do |location, marker|
       marker.lat  location.latitude
       marker.lng  location.longitude
-      marker.picture({
-                       :url => "http://maps.google.com/mapfiles/ms/icons/blue-dot.png" ,
-                       :width   => 40,
-                       :height  => 40,
-                       
-                     })
-      
+   
     end
     gon.gmap_data = gmap_data.to_json
-    gon.width = "400px"
-    gon.height = "300px"
-    gon.data = @dealer_locations
+    gon.width = "700px"
+    gon.height = "700px"
+    
   end
 
   # GET /dealer_locations/1

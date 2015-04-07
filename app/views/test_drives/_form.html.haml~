@@ -1,0 +1,40 @@
+= form_for @test_drife do |f|
+  - if @test_drife.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@test_drife.errors.count, "error")} prohibited this test_drife from being saved:"
+      %ul
+        - @test_drife.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :first_name
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    = f.text_field :last_name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :mobile
+    = f.text_field :mobile
+  .field
+    = f.label :residential_address
+    = f.text_field :residential_address
+  .field
+    = f.label :office_address
+    = f.text_field :office_address
+  .field
+    = f.label :vehicle_type
+    = f.number_field :vehicle_type
+  .field
+    = f.label :model
+    = f.number_field :model
+  .field
+    = f.label :preffered_time
+    = f.text_field :preffered_time
+  .field
+    = f.label :comments
+    = f.text_field :comments
+  .actions
+    = f.submit 'Save'

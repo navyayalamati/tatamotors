@@ -3,13 +3,12 @@
 -#= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/trunk/richmarker/src/richmarker-compiled.js"
 -#= javascript_include_tag "//google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js"
     
-%div.container{ :id => 'map-container', :style => "text-align: center" }
+%div.container.img{ :id => 'map-container', :style => "text-align: center" }
   #map.img-responsive.img-thumbnail
     
 %script
   var directionsDisplay = new google.maps.DirectionsRenderer();
   var directionsService = new google.maps.DirectionsService();
-  alert(gon.data)
   $("#map").height(gon.height)
   $("#map").width(gon.width)
   $("#map-container").width(gon.width)
@@ -18,7 +17,7 @@
   markers = handler.addMarkers(jQuery.parseJSON(gon.gmap_data))
   handler.bounds.extendWith(markers)
   handler.fitMapToBounds()
-  //handler.getMap().setZoom(12);
+  handler.getMap().setZoom(6);
   })
   
 

@@ -1,11 +1,25 @@
-%ul.menu1
-  %li
-    %a{:href => "/passenger_vehicles/description"} Introduction
-  %li
-    %a{:href => '/passenger_vehicles/features'} Features
-  %li
-    %a{:href => "#3"} Technical Specifications
-  %li
-    %a{:href => "#4"} Colour Variants
-  %li.lastItem
-    %a{:href => "#5"} Photo Gallery
+.navbar-fixed-top
+  #brand-bar.navbar
+    .navbar-inner.container-fluid
+      .col-sm-12
+        .navbar-header
+          %button.navbar-toggle.collapsed{:data => {:toggle => "collapse", :target => "#detroit-toggle"}}
+            %i.fa.fa-bars.fa-2x
+          = link_to raw("#{image_tag 'logo.png' , :align => 'left', :class => "img-rounded img-responsive", :style => "" }"), root_path, :class => "navbar-brand", :id => "logoLink"
+
+    #detroit-toggle.collapse.navbar-collapse
+      .row
+        .col-md-8.col-xs-8
+        .col-md-3.col-xs-3
+          //%img{:alt => "Enterprise Honors", :src => "/assets/tata_logo.png", :style => "width: 50px; height: 50px;"}/
+          //%a{:href => "http://www.sdlg.com/" , :target => "blank"} Global Sites
+          //= link_to "Dealers" , dealers_path
+          //%img{:alt => "Enterprise Honors", :src => "/assets/India.png", :style => "width: 40px; height: 30px;"}/
+      .visible-xs.hidden-md.hidden-sm.hidden-lg
+        = render "shared/navbar"
+
+  #navabar-lessbottom.navbar.navbar-default.common-color.hidden-xs
+    .navbar-inner.container-fluid
+      .row
+        .navbar-header.col-md-offset-3
+          = render "shared/navbar"

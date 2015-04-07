@@ -1,0 +1,39 @@
+%h1 Listing test_drives
+
+%table
+  %thead
+    %tr
+      %th First name
+      %th Last name
+      %th Email
+      %th Mobile
+      %th Residential address
+      %th Office address
+      %th Vehicle type
+      %th Model
+      %th Preffered time
+      %th Comments
+      %th
+      %th
+      %th
+
+  %tbody
+    - @test_drives.each do |test_drife|
+      %tr
+        %td= test_drife.first_name
+        %td= test_drife.last_name
+        %td= test_drife.email
+        %td= test_drife.mobile
+        %td= test_drife.residential_address
+        %td= test_drife.office_address
+        %td= test_drife.vehicle_type
+        %td= test_drife.model
+        %td= test_drife.preffered_time
+        %td= test_drife.comments
+        %td= link_to 'Show', test_drife
+        %td= link_to 'Edit', edit_test_drife_path(test_drife)
+        %td= link_to 'Destroy', test_drife, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Test drive', new_test_drife_path

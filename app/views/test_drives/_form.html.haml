@@ -1,0 +1,74 @@
+= form_for @test_drife , :html => {:class => "form-horizontal" , :role => "form"} do |f|
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label "first_name"
+    .col-md-3.col-xs-12
+      = f.text_field :first_name, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :last_name
+    .col-md-3.col-xs-12
+      = f.text_field :last_name, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :email
+    .col-md-3.col-xs-12
+      = f.text_field :email, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :mobile
+    .col-md-3.col-xs-12
+      = f.text_field :mobile, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :residential_address
+    .col-md-3.col-xs-12
+      = f.text_area :residential_address, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :office_address
+    .col-md-3.col-xs-12
+      = f.text_area :office_address, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :vehicle_type
+    .col-md-3.col-xs-12
+      = f.number_field :vehicle_type, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :model
+    .col-md-3.col-xs-12
+      = f.number_field :model, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      = f.label :preffered_time
+    .col-md-3.col-xs-12
+      = f.text_field :preffered_time, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+      .pull-left.required
+        = f.label :comments
+    .col-md-3.col-xs-12
+      = f.text_area :comments, :class => 'form-control'
+  %br
+  .row
+    .col-md-2.col-xs-12
+    .col-md-1.col-xs-12
+      = button_tag 'Submit', :type => 'submit', :class => 'btn btn-default'

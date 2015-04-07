@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @test_drife.first_name
+%p
+  %b Last name:
+  = @test_drife.last_name
+%p
+  %b Email:
+  = @test_drife.email
+%p
+  %b Mobile:
+  = @test_drife.mobile
+%p
+  %b Residential address:
+  = @test_drife.residential_address
+%p
+  %b Office address:
+  = @test_drife.office_address
+%p
+  %b Vehicle type:
+  = @test_drife.vehicle_type
+%p
+  %b Model:
+  = @test_drife.model
+%p
+  %b Preffered time:
+  = @test_drife.preffered_time
+%p
+  %b Comments:
+  = @test_drife.comments
+
+= link_to 'Edit', edit_test_drife_path(@test_drife)
+\|
+= link_to 'Back', test_drives_path

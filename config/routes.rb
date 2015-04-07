@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :test_drives
+
+  resources :enquiry_forms
+
   resources :dealer_locations
 
   resources :features

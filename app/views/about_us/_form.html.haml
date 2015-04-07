@@ -3,22 +3,22 @@
     .row
       .col-md-2.col-xs-12
         = f.label :content
-      .col-md-3.col-xs-12
+      .col-md-8.col-xs-12
         = f.text_area :content ,as: :wysihtml5, :class => 'form-control wysiHtml5textarea'
     %br
     .row
       .col-md-2.col-xs-12
         = f.label :heading
       .col-md-2.col-xs-12
-        = f.text_field :heading
+        = f.text_field :heading , :class => 'form-control'
     %br
     .row
       .col-md-2.col-xs-12
         = f.label :image
       .col-md-2.col-xs-12
-        = f.text_field :image
+        = f.file_field :image
     %br
     .row
       .col-md-2.col-xs-12
       .col-md-1.col-xs-12
-        = f.submit 'Save'
+        = button_tag "Save", :type => "submit", :class => 'btn btn-primary'

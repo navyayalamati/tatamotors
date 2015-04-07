@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @enquiry_form.name
+%p
+  %b Address:
+  = @enquiry_form.address
+%p
+  %b Email:
+  = @enquiry_form.email
+%p
+  %b Mobile:
+  = @enquiry_form.mobile
+%p
+  %b City:
+  = @enquiry_form.city
+%p
+  %b Zip code:
+  = @enquiry_form.zip_code
+%p
+  %b Vehicle type:
+  = @enquiry_form.vehicle_type
+%p
+  %b Query:
+  = @enquiry_form.query
+
+= link_to 'Edit', edit_enquiry_form_path(@enquiry_form)
+\|
+= link_to 'Back', enquiry_forms_path

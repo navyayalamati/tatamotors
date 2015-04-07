@@ -1,0 +1,35 @@
+%h1 Listing enquiry_forms
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th Email
+      %th Mobile
+      %th City
+      %th Zip code
+      %th Vehicle type
+      %th Query
+      %th
+      %th
+      %th
+
+  %tbody
+    - @enquiry_forms.each do |enquiry_form|
+      %tr
+        %td= enquiry_form.name
+        %td= enquiry_form.address
+        %td= enquiry_form.email
+        %td= enquiry_form.mobile
+        %td= enquiry_form.city
+        %td= enquiry_form.zip_code
+        %td= enquiry_form.vehicle_type
+        %td= enquiry_form.query
+        %td= link_to 'Show', enquiry_form
+        %td= link_to 'Edit', edit_enquiry_form_path(enquiry_form)
+        %td= link_to 'Destroy', enquiry_form, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Enquiry form', new_enquiry_form_path

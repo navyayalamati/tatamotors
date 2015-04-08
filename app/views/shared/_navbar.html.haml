@@ -1,32 +1,27 @@
-%ul.nav.navbar-nav
-  %li{:class => "#{controller_name == '' ? 'active' : ''}"}
-    = link_to "Passenger Vehicles", "#"
-  %li.dropdown
-    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-      Dropdown
-   
-    %ul.dropdown-menu
-      %li
-        %a{:href => "#"} home
-      %li
-        %a{:href => "#"} Action
-      %li
-        %a{:href => "#"} Another action
-      %li
-        %a{:href => "#"} Something else here
-  %li{:class => "#{controller_name == '' ? 'active' : ''}"}
-    = link_to raw("Commercial Vehicles  "), "#","data-toggle" => "dropdown", :class => 'dropdown-toggle'
-    %ul.dropdown-menu
-      %li
-        = link_to "types" , "#" 
-      %li
-        = link_to "subtypes" , "#" 
-  %li{:class => "#{controller_name == '' ? 'active' : ''}"}
-    = link_to "Visit A Dealer", "#"
-  %li{:class => "#{controller_name == '' ? 'active' : ''}"}
-    = link_to "Customer Care", "#"  
-  %li{:class => "#{controller_name == '' ? 'active' : ''}"}
-    = link_to "About Us", "#"
-  %li{:class => "#{controller_name == '' ? 'active' : ''}"}
-    = link_to "Contact Us", "#"
-  
+%nav
+  %ul
+    %li
+      %a{:href => "#"} Home
+    %li
+      %a{:href => "#"} Tutorials
+      %ul
+        %li
+          %a{:href => "#"} Photoshop
+        %li
+          %a{:href => "#"} Illustrator
+        %li
+          %a{:href => "#"} Web Design
+          %ul
+            %li
+              %a{:href => "#"} HTML
+            %li
+              %a{:href => "#"} CSS
+    %li
+      %a{:href => "#"} Articles
+      %ul
+        %li
+          %a{:href => "#"} Web Design
+        %li
+          %a{:href => "#"} User Experience
+    %li
+      %a{:href => "#"} Inspiration

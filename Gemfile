@@ -53,3 +53,4 @@ gem "geocoder"
 gem 'gmaps4rails', '~> 2.1.2'
 gem 'gon', '~> 5.2.0'  
 gem 'underscore-rails'
+gem 'devise'

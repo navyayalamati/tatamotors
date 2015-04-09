@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+def seed_user
+  User.first_or_create!(:email => "admin@gmail.com" , :password => "welcome" , :user_name => "admin" , :role => "admin")
+end
+
+seed_user

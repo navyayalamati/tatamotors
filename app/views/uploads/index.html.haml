@@ -1,0 +1,18 @@
+%h1 Listing uploads
+
+%table
+  %thead
+    %tr
+      %th Document
+     
+  %tbody
+    - @uploads.each do |upload|
+      %tr
+        %td
+          = image_tag upload.file_type, :size => '200',:class => 'img-thumbnail img-responsive', :width => "100%"
+          = upload.file_name
+          .pull-right
+            = link_to "#{upload.file_name}", download_upload_path(upload)
+        
+
+= link_to 'New Upload', new_upload_path

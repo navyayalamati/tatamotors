@@ -193,7 +193,7 @@ nav ul li {
 
 
 nav ul li a {
-    color: #fff;
+    
   display:block;
   padding:0px 40px;
   text-decoration:none;
@@ -228,8 +228,5 @@ nav ul ul {
   top: 60px;
   left: 0px;
   border: 1px solid #000;
-  color: #fff;
-}
-a {
   color: #fff;
 }

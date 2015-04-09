@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   
+  devise_for :users
+  resources :uploads do
+    member do
+      get 'download'
+    end
+  end
+
   resources :test_drives
 
   resources :enquiry_forms
